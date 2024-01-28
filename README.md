@@ -10,7 +10,7 @@ This patch works by setting `KEY_CARRIER_VOLTE_AVAILABLE_BOOL` to `true`, like t
 # Usage
 ## Build
 ### Set up Android SDK
-You'll need install platforms and build tools for android-34. Then add build tools to your `PATH` so that you can run `d8 --help` in your shell.
+You'll need install platforms and build tools for android-34.
 
 ### make
 Run `make SDK=/path/to/sdk`
