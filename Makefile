@@ -1,9 +1,8 @@
 ifndef SDK
 $(error SDK is not set)
 endif
-
-ANDROID_VER := android-34
-BUILD_TOOLS_VER := 34.0.0
+ANDROID_VER ?= android-34
+BUILD_TOOLS_VER ?= 34.0.0
 
 BUILD_TOOLS := $(SDK)/build-tools/$(BUILD_TOOLS_VER)
 PLATFORMS := $(SDK)/platforms/$(ANDROID_VER)
