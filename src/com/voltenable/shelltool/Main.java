@@ -3,17 +3,15 @@ package com.voltenable.shelltool;
 import android.os.PersistableBundle;
 import android.os.IBinder;
 import android.os.ServiceManager;
-import android.telephony.SubscriptionManager;
 import com.android.internal.telephony.ICarrierConfigLoader;
 
 public class Main {
   public static void main(String[] args) {
-    final int subId = SubscriptionManager.getDefaultVoiceSubscriptionId();
-    if (subId == SubscriptionManager.INVALID_SUBSCRIPTION_ID) {
-      System.out.println("Failed to get SubId");
+    if (args.length < 1) {
+      System.out.println("Missing subId");
       System.exit(1);
     }
-    System.out.println("SubId=" + subId);
+    final int subId = Integer.parseInt(args[0]);
     
     PersistableBundle override = new PersistableBundle();
     /* KEY_CARRIER_VOLTE_AVAILABLE_BOOL in android.telephony.CarrierConfigManager */
